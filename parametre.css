@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.2rem;
+}
+header{
+    box-shadow: 0 1px 7px gray;
+    width: 85%;
+    position: fixed;
+    margin-left: 15%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+.noti{
+    display: flex;
+    color: #647084;
+    gap: 50px;
+}
+.noti div:first-child{
+    position: relative;
+    margin-top: 5px;
+}
+.noti div:first-child p{
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 0, 0, 0.82);
+    height: 20px;
+    width: 20px;
+    clip-path: circle();
+    margin-left: 10px;
+}
+.noti div:first-child i{
+    font-size: 2rem;
+
+}
+.noti div:last-child{
+    display: flex;
+    align-items: center;
+}
+.noti div:last-child i{
+    background-color: #647084;
+    color: white;
+    height: 35px;
+    width: 35px;
+    clip-path: circle();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+/* layout */
+.layout{
+    display: flex;
+}
+.layout main{
+    flex: 1;
+    padding-top: 7rem;
+    padding-left: 16%;
+}
+/* aside bare */
+aside{
+    background: #0C2542;
+    color: white;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+}
+aside a{
+    color: white;
+    text-decoration: none;
+}
+aside h2{
+    padding: 3rem 0;
+    justify-self: center;
+}
+aside h2 i{
+    color: #2E6CED;
+}
+aside i{
+    margin-right: 10px;
+}
+aside li{
+    margin-left: 1rem;
+    padding-left: 20px;
+    line-height: 3rem;
+    margin: 2rem;
+    list-style: none;
+    border-radius: 10px;
+    transition: all 0.7s ease-in-out;
+}
+aside ul a:nth-child(4) li{
+    background: blue;
+}
+aside li:hover{
+    background: rgba(128, 128, 128, 0.55);
+}
+aside hr{
+    width: 100%;
+    border: none;
+    height: 0.8px;
+    background: grey;
+}
+aside ul + hr{
+    margin-top: 30vh;
+}
+.profil{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.arriereplan{
+    background: #2E3C50;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+}
+.profil div:first-child{
+    display: flex;
+}
+.profil div:first-child i{ 
+    font-size: 1.8rem;
+    background: blue;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle();
+}
+.profil div:first-child p{
+    color: rgb(137, 135, 135);
+    text-align: start;
+}
+.profil div:first-child p span{
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: white;
+}
+.arriereplan:last-child{
+    background: rgba(255, 0, 0, 0.467);
+}
+        /* petite fenêtre */
+.profil label{
+    cursor: pointer;
+}
+.model-chekbox{
+    display: none;
+}
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+}
+.model-chekbox:checked ~ .modal{
+    display: flex;
+}
+.overlay{
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(1px);
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.modal-content{
+    background: white;
+    color: black;
+    width: 40%;
+    height: 66vh;
+    border-radius: 20px;
+    z-index: 1;
+    animation: popup  0.5s ease-in-out;
+    overflow: scroll;
+}
+.close-btn{
+    display: inline-block;
+    cursor: pointer;
+}
+.entete{
+    justify-content: space-between;
+    padding: 30px;
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.552);
+}
+.entete h2{
+    display: flex;
+    padding: 0;
+}
+.entete h2 i{
+    height: 32px !important;
+    width: 32px !important;
+    font-size: 20px !important;
+    color: white;
+    background: black !important;
+}
+.entete label i{
+    background: white !important;
+}
+.entete + div{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+.entete + div i{
+    background: rgba(0, 0, 255, 0.7);
+    color: white;
+    align-self: center;
+    padding: 2rem;
+    margin: 2rem auto 0.7rem;
+    clip-path: circle();
+    font-size: 3rem;
+}
+.entete + div button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.modal-content form{
+    margin: 3rem auto;
+}
+.info-profile{
+    display: flex;
+    gap: 2px;
+}
+.info-profile label{
+    padding: 1.5rem 2rem;
+    width: 50%;
+    font-size: 1.5rem;
+}
+.info-profile input{
+    margin-top: 15px;
+    width: 95%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.3rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.role-profile {
+    width: 100%;
+}
+.role-profile label{
+    display: block;
+    margin: 2rem auto;
+    width: 92%;
+    font-size: 1.5rem;
+}
+.role-profile input{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.3rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.btn-profile {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto 0;
+    text-align: end;
+}
+.btn-profile button{
+    padding: 20px;
+    font-size: 1.5rem;
+    margin: 20px; 
+    border: none;
+    border-radius: 10px;   
+}
+.btn-profile button:last-child{
+    color: white;
+    background: blue;
+}
+@keyframes popup{
+    from{transform:scale(0.5);opacity:0 }
+    to {transform: scale(1);opacity: 1;}
+}
+/* contenue */
+main{
+    color: rebeccapurple;
+}

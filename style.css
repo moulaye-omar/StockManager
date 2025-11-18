@@ -13,6 +13,7 @@ body{
 }
 .card{
     width: 60%;
+    max-width: 70rem;
     display: flex;
     overflow: hidden;
     border-radius: 20px;
@@ -39,7 +40,8 @@ body{
 }
 .card form button{
     background: #1C4673;
-    width: 40%;
+    width: 45%;
+    min-width: 8rem;
     padding:  10px 20px ;
     border-radius: 20px;
     color: white;
@@ -78,4 +80,22 @@ body{
     color: #1C4673;
     padding: 20px 15px;
     border-radius: 50%;
+}
+@media (max-width:768px) {
+    body{
+        font-size: 14px;
+    }
+    .card{
+        width: 90%;
+    }
+    .card div:first-child{
+        gap: 10px;
+        padding: 2rem;
+    }
+    .card p{
+        line-height: 1.4rem;
+    }
+    .card div:last-child{
+        font-size: 14px;
+    }
 }
